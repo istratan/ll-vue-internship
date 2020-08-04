@@ -1,17 +1,18 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ProductList></ProductList>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import ProductList from './components/product-list.component'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ProductList
   }
 }
 </script>
@@ -25,4 +26,22 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.products-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .product-image{
+    max-width: 230px;
+  }
+
+  .product-card {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
 </style>
